@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo estrella</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body class="bg-dark" >
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-primary elevation-1">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Algoritmo estrella
+        </a>
+    </nav>
+
+    <div class="container-fluid mt-5 text-white">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="card bg-dark border-0 elevation-1 border-left-success">
+                            <div class="card-body">
+                                <h4>Ejecución</h4>
+                                <div class="row">
+                                        <canvas class="col" id="canvas" width="500px" height="500px"
+                                            style="border: 2px solid #000"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col">
+                        <div class="card bg-dark border-0 elevation-1 border-left-warning">
+                            <div class="card-body">
+                                <h5>Detalles</h5>
+                                <p id="detalles">
+                                    <b>Filas:</b><br><br>
+                                    <b>Columnas:</b><br><br>
+                                    <b>Inicio:</b><br><br>
+                                    <b>Destino:</b><br><br>
+                                    <b>Obstaculos:</b><br><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row mb-5">
+                    <div class="col-md">
+                        <div class="card bg-dark border-0 elevation-1 border-left-danger">
+                            <div class="card-body">
+                                <h4>Datos</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="filasInput">Filas</label>
+                                                <input type="number" class="form-control" id="filasInput"
+                                                    aria-describedby="Filas" value="11">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="columnasInput">Columnas</label>
+                                                <input type="number" class="form-control" id="columnasInput"
+                                                    aria-describedby="columnas"
+                                                    value="10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="inicioInput">Coordenadas de inicio</label>
+                                                <input type="text" class="form-control" id="inicioInput"
+                                                    placeholder="Ejemplo: (2,4)"
+                                                    aria-describedby="coordenadas de inicio"
+                                                    value="(1,6)">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="finalInput">Coordenadas de final</label>
+                                                <input type="text" class="form-control" id="finalInput"
+                                                    placeholder="Ejemplo: (2,4)"
+                                                    aria-describedby="coordenadas del final"
+                                                    value="(2,9)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="inicioInput">Coordenadas de obstaculos</label>
+                                                <textarea class="form-control" id="obstaculosInput"
+                                                    placeholder="Ejemplo: (1,2),(4,2),(2,5),(3,9),(5,6),(1,5),... *Sin espacios y separados por comas*"
+                                                    >(0,4),(1,4),(3,2),(3,3),(4,3),(5,3),(6,3),(7,3),(8,3),(2,7),(3,7),(4,7),(7,6),(10,7)</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <button type="button" class="btn btn-block btn-success" onclick="calcular()">Calcular ruta óptima</button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md">
+                        <div class="card bg-dark border-0 elevation-1 border-left-info">
+                            <div class="card-body">
+                                <h4>Resultados</h4>
+                                <p><b>Ruta óptima calculada:</b></p>
+                                <div class="row" id="resultado"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./assets/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./assets/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- <script src="./assets/js/asdsa.js"></script> -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/aEstrella.js"></script>
+</body>
+
+</html>
+

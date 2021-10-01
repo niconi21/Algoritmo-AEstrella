@@ -1,0 +1,42 @@
+@import "./variables";
+@import "../bootstrap/scss/bootstrap.scss";
+
+.elevation-1 {
+  box-shadow: 5px 10px 10px $black;
+}
+
+.border-left-primary{
+    border-left: 0.25rem solid $primary !important;
+}
+.border-left-secondary{
+    border-left: 0.25rem solid $secondary !important;
+}
+.border-left-success{
+    border-left: 0.25rem solid $success !important;
+}
+.border-left-info{
+    border-left: 0.25rem solid $info !important;
+}
+.border-left-warning{
+    border-left: 0.25rem solid $warning !important;
+}
+.border-left-danger{
+    border-left: 0.25rem solid $danger !important;
+}
+.border-left-light{
+    border-left: 0.25rem solid $light !important;
+}
+.border-left-dark{
+    border-left: 0.25rem solid $dark !important;
+}
+
+
+
+
+
+
+
+
+
+
+
