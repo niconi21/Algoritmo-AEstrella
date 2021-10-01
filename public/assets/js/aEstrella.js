@@ -80,7 +80,7 @@ function inicializa(filasL, columnasL, principioL, finL, obstaculos) {
     // //CREAMOS ORIGEN Y DESTINO DE LA RUTA
     principio = escenario[principioL.y][principioL.x];
 
-    fin = escenario[finL.x][finL.y];
+    fin = escenario[finL.y][finL.x];
     // //INICIALIZAMOS OPENSET
     openSet.push(principio)
     // //EMPEZAMOS A EJECUTAR EL BUCLE PRINCIPAL
@@ -181,6 +181,7 @@ function Casilla(x, y) {
 
         //DIBUJAMOS EL CUADRO EN EL CANVAS
         ctx.fillStyle = color;
+        ctx.fillText = `(${this.x}, ${this.y})`
         ctx.fillRect(this.x * anchoT, this.y * altoT, anchoT, altoT);
     }
 
@@ -189,6 +190,7 @@ function Casilla(x, y) {
     //DIBUJA OPENSET
     this.dibujaOS = function () {
         ctx.fillStyle = '#008000';
+        ctx.fillText = `(${this.x}, ${this.y})`
         ctx.fillRect(this.x * anchoT, this.y * altoT, anchoT, altoT);
 
     }
@@ -196,6 +198,7 @@ function Casilla(x, y) {
     //DIBUJA CLOSEDSET
     this.dibujaCS = function () {
         ctx.fillStyle = '#800000';
+        ctx.fillText = `(${this.x}, ${this.y})`
         ctx.fillRect(this.x * anchoT, this.y * altoT, anchoT, altoT);
     }
 
@@ -203,6 +206,7 @@ function Casilla(x, y) {
     //DIBUJA CAMINO
     this.dibujaCamino = function () {
         ctx.fillStyle = '#00FFFF';  //cyan
+        ctx.fillText = `(${this.x}, ${this.y})`
         ctx.fillRect(this.x * anchoT, this.y * altoT, anchoT, altoT);
     }
 
