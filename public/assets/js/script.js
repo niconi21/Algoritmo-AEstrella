@@ -1,3 +1,6 @@
+
+
+
 const calcular = () => {
     let filas = $('#filasInput').val()
     let columnas = $('#columnasInput').val()
@@ -12,7 +15,16 @@ const calcular = () => {
     <b>Destino:${$('#finalInput').val()}</b><br><br>
     <b>Obstaculos:${$('#obstaculosInput').val()}</b><br><br>
     `)
-    inicializa(filas, columnas, inicio, fin, obstaculos)
+
+    let algoritmo = new AEstrella(filas, columnas, inicio, fin, obstaculos)
+    // inicializa(filas, columnas, inicio, fin, obstaculos)
+}
+const limpiar = () => {
+    canvas = document.getElementById('canvas');
+    ctx = canvas.getContext('2d');
+    canvas.width = canvas.width;
+    canvas.height = canvas.height;
+    $('#resultado').html('')
 }
 
 const obtenerCoordenadaObstaculos = (obstaculos = '') => {
@@ -24,7 +36,7 @@ const obtenerCoordenadaObstaculos = (obstaculos = '') => {
 
     coordenadas.forEach(coordenada => {
         let xy = coordenada.split(',')
-        obstaculosCoordenadas.push({ x: xy[0], y: xy[1] })
+        obstaculosCoordenadas.push({ x: xy[0] - 1, y: xy[1] - 1 })
     })
     return obstaculosCoordenadas;
 }
@@ -32,5 +44,5 @@ const obtenerCoordenadaObstaculos = (obstaculos = '') => {
 const obtenerXY = (valor = '') => {
     valor = valor.substr(1, valor.length - 2);
     let coordenadas = valor.split(',');
-    return { x: coordenadas[0], y: coordenadas[1] }
+    return { x: coordenadas[0] - 1, y: coordenadas[1] - 1 }
 }

@@ -48,25 +48,7 @@ function inicializa(filasL, columnasL, principioL, finL, obstaculos) {
             escenario[i][j] = new Casilla(j, i)
         }
     }
-    // escenario[10].forEach( columna =>{
-    //     columna.tipo=1
-    // })
-    // escenario[0][2].tipo=1
     definirObstaculos(obstaculos);
-    // escenario[0][4].tipo = 1
-    // escenario[1][4].tipo = 1
-    // escenario[3][2].tipo = 1
-    // escenario[3][3].tipo = 1
-    // escenario[4][3].tipo = 1
-    // escenario[5][3].tipo = 1
-    // escenario[6][3].tipo = 1
-    // escenario[7][3].tipo = 1
-    // escenario[8][3].tipo = 1
-    // escenario[2][7].tipo = 1
-    // escenario[3][7].tipo = 1
-    // escenario[4][7].tipo = 1
-    // escenario[7][6].tipo = 1
-    // escenario[10][7].tipo = 1
 
 
     //AÑADIMOS LOS VECINOS
@@ -181,7 +163,6 @@ function Casilla(x, y) {
 
         //DIBUJAMOS EL CUADRO EN EL CANVAS
         ctx.fillStyle = color;
-        ctx.fillText = `(${this.x}, ${this.y})`
         ctx.fillRect(this.x * anchoT, this.y * altoT, anchoT, altoT);
     }
 
