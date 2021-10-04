@@ -1,6 +1,6 @@
 
 
-
+let algoritmo;
 const calcular = () => {
     let filas = $('#filasInput').val()
     let columnas = $('#columnasInput').val()
@@ -16,15 +16,17 @@ const calcular = () => {
     <b>Obstaculos:${$('#obstaculosInput').val()}</b><br><br>
     `)
 
-    let algoritmo = new AEstrella(filas, columnas, inicio, fin, obstaculos)
-    // inicializa(filas, columnas, inicio, fin, obstaculos)
+    algoritmo = new AEstrella(filas, columnas, inicio, fin, obstaculos)
+
 }
+
 const limpiar = () => {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     canvas.width = canvas.width;
     canvas.height = canvas.height;
-    $('#resultado').html('')
+    $('#resultado').empty()
+    algoritmo.camino = []
 }
 
 const obtenerCoordenadaObstaculos = (obstaculos = '') => {

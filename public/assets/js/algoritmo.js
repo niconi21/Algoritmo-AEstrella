@@ -12,6 +12,10 @@ class AEstrella {
         this.crearInicioFin();
         this.crearArreglos();
         this.calcularVecinos();
+        this.calcular()
+    }
+
+    calcular(){
         this.timeIntervalValue = setInterval(() => {
             this.dibujarEscenario();
             this.algoritmo()
@@ -186,6 +190,10 @@ class AEstrella {
         }
     }
 
+    getCamino(){
+        return this.camino
+    }
+
     escribirResutlados() {
 
         let coordenadas = '<div class="col-sm">';
@@ -198,9 +206,6 @@ class AEstrella {
         }
         coordenadas += '</div>'
         $('#resultado').append(coordenadas)
-    }
-
-    reiniciar() {
     }
 
 }
