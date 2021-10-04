@@ -2,6 +2,7 @@
 
 let algoritmo;
 const calcular = () => {
+    $('#resultado').empty()
     let filas = $('#filasInput').val()
     let columnas = $('#columnasInput').val()
     let inicio = obtenerXY($('#inicioInput').val())
@@ -25,7 +26,7 @@ const limpiar = () => {
     ctx = canvas.getContext('2d');
     canvas.width = canvas.width;
     canvas.height = canvas.height;
-    $('#resultado').empty()
+    
     algoritmo.camino = []
 }
 
