@@ -9,11 +9,11 @@ const calcular = () => {
     let obstaculos = obtenerCoordenadaObstaculos($('#obstaculosInput').val())
     $('#detalles').html('')
     $('#detalles').append(`
-    <b>Filas:${filas}</b><br><br>
-    <b>Columnas:${columnas}</b><br><br>
-    <b>Inicio::${$('#inicioInput').val()}</b><br><br>
-    <b>Destino:${$('#finalInput').val()}</b><br><br>
-    <b>Obstaculos:${$('#obstaculosInput').val()}</b><br><br>
+    <b>Filas: ${filas}</b><br><br>
+    <b>Columnas: ${columnas}</b><br><br>
+    <b>Inicio: ${$('#inicioInput').val()}</b><br><br>
+    <b>Destino: ${$('#finalInput').val()}</b><br><br>
+    <b>Obstaculos: ${$('#obstaculosInput').val()}</b><br><br>
     `)
 
     algoritmo = new AEstrella(filas, columnas, inicio, fin, obstaculos)
