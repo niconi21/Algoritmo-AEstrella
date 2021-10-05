@@ -179,7 +179,8 @@ class AEstrella {
     }
 
     heuristica(a, b) {
-        return Math.sqrt(Math.pow((a.x - b.x), 2) + Math.pow((a.y - b.y), 2))
+        // return Math.sqrt(Math.pow((a.x - b.x), 2) + Math.pow((a.y - b.y), 2))
+        return  Math.abs((b.x - a.x )*10) + Math.abs((b.y - a.y )*10);
     }
 
     borraDelArray(array, elemento) {
@@ -201,7 +202,7 @@ class AEstrella {
         for (let index = this.camino.length - 1; index >= 0; index--) {
             if (i % 5 == 0)
                 coordenadas += '</div><div class="col-sm">';
-            coordenadas += `${i + 1}.- (${this.camino[index].x}, ${this.camino[index].y}) <br>`
+            coordenadas += `${i + 1}.- (${this.camino[index].x+1}, ${this.camino[index].y+1}) <br>`
             i++;
         }
         coordenadas += '</div>'
