@@ -179,7 +179,6 @@ class AEstrella {
     }
 
     heuristica(a, b) {
-        // return Math.sqrt(Math.pow((a.x - b.x), 2) + Math.pow((a.y - b.y), 2))
         return  Math.abs((b.x - a.x )*10) + Math.abs((b.y - a.y )*10);
     }
 
