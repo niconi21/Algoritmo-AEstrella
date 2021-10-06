@@ -21,11 +21,11 @@ class AEstrella {
         this.calcular() //Iniciamos el algoritmo para calcular la ruta optima
     }
 
-    calcular() {
-        this.timeIntervalValue = setInterval(() => {
-            this.dibujarEscenario();
-            this.algoritmo()
-        }, 100);
+    calcular() {//con este método podemos hacer un bucle para que se ejecute el algoritmo a*
+        this.timeIntervalValue = setInterval(() => { //usamos un setInterval, guardando si id para despues pararlo
+            this.dibujarEscenario();//dibujamos el escenario
+            this.algoritmo()//ejecutamos el algoritmo
+        }, 100);//determinamos que este bucle se repita a cada 100ms
     }
 
     crearMatriz() { //Este método nos permitirá crear la matriz de las coordenadas que tendŕa el tablero
