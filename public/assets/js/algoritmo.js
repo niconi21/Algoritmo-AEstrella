@@ -179,7 +179,7 @@ class AEstrella {
     }
 
     heuristica(a, b) {
-        return  Math.abs((b.x - a.x )*10) + Math.abs((b.y - a.y )*10);
+        return  Math.abs((b.x - a.x )*14) + Math.abs((b.y - a.y )*14);
     }
 
     borraDelArray(array, elemento) {
